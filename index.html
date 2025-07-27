@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Umbrella - Forbidden Vault</title>
+  <link rel="icon" type="image/png" href="logo.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @font-face {
+      font-family: 'Hacked';
+      src: url('https://fonts.cdnfonts.com/css/hacked');
+    }
+    body {
+      font-family: 'Hacked', monospace;
+      background: linear-gradient(135deg, #0f0f0f, #1c2526);
+      color: #e5e7eb;
+      min-height: 100vh;
+      margin: 0;
+      overflow-x: hidden;
+      position: relative;
+    }
+    .scanline {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      height: 2px;
+      background: rgba(255, 0, 0, 0.2);
+      animation: scanline 6s linear infinite;
+    }
+    @keyframes scanline {
+      0% { transform: translateY(-100%); }
+      100% { transform: translateY(100vh); }
+    }
+    .umbra-logo {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      width: 100px;
+      height: 100px;
+      background: url('logo.png') no-repeat center;
+      background-size: cover;
+      filter: drop-shadow(0 0 15px rgba(255, 0, 0, 0.7));
+      animation: logo-pulse 3s ease-in-out infinite, glitch 1s linear infinite;
+      z-index: 10;
+    }
+    @keyframes logo-pulse {
+      0% { transform: scale(1); opacity: 0.8; }
+      50% { transform: scale(1.1); opacity: 1; }
+      100% { transform: scale(1); opacity: 0.8; }
+    }
+    @keyframes glitch {
+      2%, 64% { transform: translate(2px, 0) skew(0deg); }
+      4%, 60% { transform: translate(-2px, 0) skew(0deg); }
+      62% { transform: translate(0, 0) skew(5deg); }
+    }
+    .terminal-box {
+      background: #1a1a1a;
+      border: 2px solid #ff0000;
+      box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
+    }
+    .dragon-btn {
+      position: relative;
+      padding: 1.5rem 3rem;
+      font-family: 'Hacked', monospace;
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #ff0000;
+      background: #1a1a1a;
+      border: 3px solid #ff0000;
+      border-radius: 8px;
+      box-shadow: 0 0 20px rgba(255, 0, 0, 0.5), inset 0 0 10px rgba(255, 0, 0, 0.3);
+      overflow: hidden;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+    .dragon-btn:hover {
+      background: #ff0000;
+      color: #000;
+      box-shadow: 0 0 30px rgba(255, 0, 0, 0.8), inset 0 0 15px rgba(0, 0, 0, 0.5);
+      transform: scale(1.05);
+    }
+    .dragon-btn:active {
+      transform: scale(0.95);
+    }
+    .dragon-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('https://img.icons8.com/ios-filled/100/ffffff/dragon.png') no-repeat center;
+      background-size: 60%;
+      opacity: 0.2;
+      z-index: 0;
+      transition: opacity 0.3s ease;
+    }
+    .dragon-btn:hover::before {
+      opacity: 0.4;
+    }
+    .dragon-btn span {
+      position: relative;
+      z-index: 1;
+    }
+    .fire-glow {
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255, 0, 0, 0.2) 0%, transparent 70%);
+      animation: pulse 4s ease-in-out infinite;
+      z-index: -1;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 0.3; }
+      50% { transform: scale(1.2); opacity: 0.5; }
+      100% { transform: scale(1); opacity: 0.3; }
+    }
+    .creepy-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('https://via.placeholder.com/10x10?text=static') repeat;
+      opacity: 0.05;
+      pointer-events: none;
+      z-index: -1;
+    }
+  </style>
+</head>
+<body>
+  <div class="scanline"></div>
+  <div class="creepy-overlay"></div>
+  <div class="umbra-logo"></div>
+<!-- Main Content -->
+  <main class="container mx-auto py-12 px-4 text-center">
+    <h1 class="text-5xl font-bold text-red-600 glitch mb-8">Umbrella Forbidden Vault</h1>
+    <div class="terminal-box p-8 mx-auto max-w-2xl">
+      <h2 class="text-2xl font-bold text-red-600 mb-6">افشای اطلاعات</h2>
+      <p class="text-gray-300 mb-4">
+        اینک سازمان <span class="text-red-500">آمبرلا </span>  آنجا که اخلاقیات و شرافت انسانی در زیر پای هوس‌های پلید لگدمال می‌گردد، موجوداتی شوم و فرومایه با نیت‌های شیطانی به حریم پاکدامنی و عفت بانوان تعرض می‌کنند. اینک، ما، نگهبانان عدالت و پاسداران حرمت انسانی، با عزمی راسخ و اراده‌ای پولادین، قسم یاد کرده‌ایم که نقاب از چهره این مزاحمان ناموس‌پرست برداریم و اطلاعات هویتی آنان را، اعم از نام، نشان، و دیگر مشخصات، در معرض دید عموم قرار دهیم. این اقدام، نه صرفاً تنبیه، بلکه هشداری است مهیب به تمامی کسانی که در اندیشه تعدی به ساحت مقدس زنان و دختران این مرز و بوم هستند. باشد که این افشاگری، رعشه‌ای بر اندام پلیدشان افکند و درس عبرتی گردد برای آیندگان، تا دیگر هیچ کس جرأت نکند به حریم پاکی و شرافت دست‌درازی نماید.
+      </p>
+      <p class="text-gray-300 mb-4">
+        now we <span class="text-red-500">Umbrella</span> where morality and human dignity are trampled under the vile feet of depraved desires, sinister beings with nefarious intentions encroach upon the sanctity of chastity and virtue of women. We, the vigilant guardians of justice and steadfast protectors of human honor, with resolute determination and an iron will, solemnly vow to unmask these despicable harassers of virtue and publicly disseminate their identifying information—names, addresses, and other particulars. This endeavor is not merely a punishment but a formidable admonition to all those who dare contemplate violating the sacred domain of women and daughters of this land. May this revelation send shivers down their wretched spines and serve as a profound lesson for posterity, ensuring that no one ever again dares to trespass upon the hallowed realm of purity and honor.
+      </p>
+      <a href="void.html" class="text-red-500 hover:text-red-400 mx-2">
+      <button class="dragon-btn mt-6">
+        <span>Next</span>
+        <div class="fire-glow"></div>
+      </button></a>
+    </div>
+  </main>
+
+  <script>
+    document.querySelector('.dragon-btn').addEventListener('click', () => {
+      alert('you have T-Virus');
+    });
+  </script>
+</body>
+</html>
