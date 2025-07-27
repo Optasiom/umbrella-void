@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="https://upload.wikimedia.org/wikipedia/en/9/94/Umbrella_Corporation_logo.svg" alt="Umbrella Logo" width="100" />
+  <img src="logo.png" alt="Umbrella Logo" width="100" />
   <br />
   <strong>Umbrella Corporation</strong>
 </h1>
